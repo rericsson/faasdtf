@@ -4,6 +4,9 @@ You will need to have a Hetzner API key and SSH key already set up. To run, clon
 ```
 hcloud_token = "<your-token-here>"
 ```
+
+You will want to update vars.tf to your preferred server name, server type and SSH key. 
+
 Then you can run `terraform init` and `terraform plan` to see what is going to be created. If it looks good, run `terraform apply` to create the server. 
 
 After `terraform apply` returns the IP address, login in to that server using ssh and get the generated password with `cat /var/lib/faasd/secrets/basic-auth-password`. With the password, login as user `admin` to `http:<ip address>:8080\ui` 
