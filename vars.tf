@@ -13,3 +13,8 @@ variable "ssh_key" {
     type = string
 }
 
+variable "faasd_password" {
+    default = "Pickles"
+    type = string
+}
+

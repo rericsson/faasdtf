@@ -17,6 +17,9 @@ provider "hcloud" {
 
 data "template_file" "cloud_init" {
     template = "${file("cloud-init.tpl")}"
+    vars = {
+        faasd_password = var.faasd_password
+    }
 }
 
 resource "hcloud_server" "foo" {
